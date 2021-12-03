@@ -48,23 +48,5 @@ namespace adventofcode2021.Puzzles.Day3
                 ? Convert.ToInt32(matchingRows.First(), 2)
                 : FindDiagRowValueForRating(matchingRows, bitOffset + 1, strategy);
         }
-
-        //private int FindDiagRowValueForRating(IEnumerable<string> diagnostics, int bitOffset, Func<int, int> strategy)
-        //{
-        //    var maxOccuringBitValue = diagnostics
-        //        .Select(d => int.Parse(d[bitOffset].ToString()))
-        //            .GroupBy(v => v).Select(g => new { Key = g.Key, Cnt = g.Count() })
-        //                .OrderByDescending(go => go.Cnt).ThenByDescending(go => go.Key).FirstOrDefault().Key;
-
-        //    var bitValueToMatch = strategy(maxOccuringBitValue);
-
-        //    var matchingRows = diagnostics.Where(d => int.Parse(d[bitOffset].ToString()) == bitValueToMatch).ToList();
-
-        //    if (matchingRows.Count == 0) throw new Exception("No matching rows for strategy");
-
-        //    return matchingRows.Count == 1
-        //        ? Convert.ToInt32(matchingRows.First(), 2)
-        //        : FindDiagRowValueForRating(matchingRows, bitOffset + 1, strategy);
-        //}
     }
 }
