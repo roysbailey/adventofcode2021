@@ -14,17 +14,17 @@ namespace adventofcode2021.Puzzles.Day4
             _engine = engine;
         }
 
-        public void Execute(string fileName = ".\\Puzzles\\Day1\\Input.txt")
+        public void Execute(string fileName = ".\\Puzzles\\Day4\\Input.txt")
         {
             var input = _fileReader.ReadData<string>(fileName);
             int result;
             // Task 1
             _engine.Execute(input, out result);
-            Console.WriteLine($"Task 1 - Power consumption result: {result}.");
+            Console.WriteLine($"Task 1 - Winning Bingo Card score: {result}.");
 
-            //// Task 2
+            // Task 2
             _engine.Execute2(input, out result);
-            Console.WriteLine($"Task 2 - Life Support Rating: {result}.");
+            Console.WriteLine($"Task 2 - Losing Bingo Card score: {result}.");
         }
     }
 }
