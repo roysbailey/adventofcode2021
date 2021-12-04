@@ -14,7 +14,7 @@ namespace adventofcode2021.Puzzles.Day4
             IEnumerable<BingoCard> bingoCards;
             ParseBingoInput(bingoInput, out bingoNumbers, out bingoCards);
 
-            result = FindBingoWinner(bingoNumbers, bingoCards);
+            result = PlayBingo(bingoNumbers, bingoCards, () => true);
         }
 
         public void Execute2(IEnumerable<string> bingoInput, out int result)
@@ -23,28 +23,16 @@ namespace adventofcode2021.Puzzles.Day4
             IEnumerable<BingoCard> bingoCards;
             ParseBingoInput(bingoInput, out bingoNumbers, out bingoCards);
 
-            result = FindBingoLoser(bingoNumbers, bingoCards);
+            result = PlayBingo(bingoNumbers, bingoCards, () => bingoCards.Count(bc => bc.IsWinner) == bingoCards.Count());
         }
 
-        private int FindBingoWinner(IEnumerable<int> bingoNumbers, IEnumerable<BingoCard> bingoCards)
+        private int PlayBingo(IEnumerable<int> bingoNumbers, IEnumerable<BingoCard> bingoCards, Func<bool> strategy)
         {
             foreach (var number in bingoNumbers)
             {
                 foreach (var card in bingoCards)
                     if (card.MarkNumber(number))
-                        return card.FinalScore(number);
-            }
-
-            return 0;
-        }
-
-        private int FindBingoLoser(IEnumerable<int> bingoNumbers, IEnumerable<BingoCard> bingoCards)
-        {
-            foreach (var number in bingoNumbers)
-            {
-                foreach (var card in bingoCards)
-                    if (card.MarkNumber(number))
-                        if (bingoCards.Count(bc=>bc.IsWinner) == bingoCards.Count())
+                        if (strategy())
                             return card.FinalScore(number);
             }
 
