@@ -4,8 +4,7 @@ using System.Text;
 
 namespace adventofcode2021.Puzzles.Day1
 {
-    public interface IDay1Engine
+    public interface IDay1Engine : IDayEngine<int>
     {
-        public void Execute(int rollingMeasureCount, IEnumerable<int> depths, out int countOfIncreases);
     }
 }

@@ -16,7 +16,7 @@ namespace adventofcode2021Tests
             int result;
 
             // Act
-            sut.Execute(instructions, out result);
+            sut.Part1(instructions, out result);
 
             // Assert
             result.Should().Be(expectedValue);
@@ -32,7 +32,7 @@ namespace adventofcode2021Tests
             int result;
 
             // Act
-            sut.Execute2(instructions, out result);
+            sut.Part2(instructions, out result);
 
             // Assert
             result.Should().Be(expectedValue);

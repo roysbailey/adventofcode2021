@@ -8,6 +8,16 @@ namespace adventofcode2021.Puzzles.Day1
 {
     public class Day1Engine : IDay1Engine
     {
+        public void Part1(IEnumerable<int> depths, out int countOfIncreases)
+        {
+            Execute(1, depths, out countOfIncreases);
+        }
+
+        public void Part2(IEnumerable<int> depths, out int countOfIncreases)
+        {
+            Execute(3, depths, out countOfIncreases);
+        }
+
         public void Execute(int rollingMeasureCount, IEnumerable<int> depths, out int countOfIncreases)
         {
             var depthList = depths.ToList();

@@ -14,17 +14,16 @@ namespace adventofcode2021.Puzzles.Day5
             _engine = engine;
         }
 
-        public void Execute(string fileName = ".\\Puzzles\\Day5\\Input.txt")
+        public void Execute(string fileName)
         {
             var input = _fileReader.ReadData<string>(fileName);
             int result;
-            // Task 1
-            _engine.Execute(input, out result);
-            Console.WriteLine($"Task 1 - score: {result}.");
 
-            // Task 2
-            //_engine.Execute2(input, out result);
-            //Console.WriteLine($"Task 2 - score: {result}.");
+            _engine.Part1(input, out result);
+            Console.WriteLine($"Task 1 - Count of overlap points for straight lines: {result}.");
+
+            _engine.Part2(input, out result);
+            Console.WriteLine($"Task 2 - Count of overlap points for ALL lines: {result}.");
         }
     }
 }

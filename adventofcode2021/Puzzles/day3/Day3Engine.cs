@@ -8,7 +8,7 @@ namespace adventofcode2021.Puzzles.Day3
 {
     public class Day3Engine : IDay3Engine
     {
-        public void Execute(IEnumerable<string> diagnostics, out int result)
+        public void Part1(IEnumerable<string> diagnostics, out int result)
         {
             int gammaRate = 0, epsilonRate = 0, numBits = diagnostics.First().Length;
             for (int bitOffset = 0; bitOffset < numBits; bitOffset++)
@@ -25,7 +25,7 @@ namespace adventofcode2021.Puzzles.Day3
             result = gammaRate * epsilonRate;
         }
 
-        public void Execute2(IEnumerable<string> diagnostics, out int result)
+        public void Part2(IEnumerable<string> diagnostics, out int result)
         {
             var oxyGenRating = FindDiagRowValueForRating(diagnostics, 0, v => v);
             var co2ScrubberRating = FindDiagRowValueForRating(diagnostics, 0, v => v == 1 ? 0 : 1);

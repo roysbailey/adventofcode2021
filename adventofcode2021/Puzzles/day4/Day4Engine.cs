@@ -8,7 +8,7 @@ namespace adventofcode2021.Puzzles.Day4
 {
     public class Day4Engine : IDay4Engine
     {
-        public void Execute(IEnumerable<string> bingoInput, out int result)
+        public void Part1(IEnumerable<string> bingoInput, out int result)
         {
             IEnumerable<int> bingoNumbers;
             IEnumerable<BingoCard> bingoCards;
@@ -17,7 +17,7 @@ namespace adventofcode2021.Puzzles.Day4
             result = PlayBingo(bingoNumbers, bingoCards, () => true);
         }
 
-        public void Execute2(IEnumerable<string> bingoInput, out int result)
+        public void Part2(IEnumerable<string> bingoInput, out int result)
         {
             IEnumerable<int> bingoNumbers;
             IEnumerable<BingoCard> bingoCards;

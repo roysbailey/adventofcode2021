@@ -14,16 +14,15 @@ namespace adventofcode2021.Puzzles.Day2
             _engine = engine;
         }
 
-        public void Execute(string fileName = ".\\Puzzles\\Day1\\Input.txt")
+        public void Execute(string fileName)
         {
             var input = _fileReader.ReadData<string>(fileName);
             int result;
-            // Task 1
-            _engine.Execute(input, out result);
+
+            _engine.Part1(input, out result);
             Console.WriteLine($"Task 1 - Position calculation result: {result}.");
 
-            // Task 2
-            _engine.Execute2(input, out result);
+            _engine.Part2(input, out result);
             Console.WriteLine($"Task 2 - Position calculation on aim result: {result}.");
         }
     }

@@ -8,7 +8,7 @@ namespace adventofcode2021.Puzzles.Day2
 {
     public class Day2Engine : IDay2Engine
     {
-        public void Execute(IEnumerable<string> input, out int result)
+        public void Part1(IEnumerable<string> input, out int result)
         {
             var instructions = input.Select(i => { var x = i.Split(" "); return new { Command = x[0], Value = int.Parse(x[1]) }; });
 
@@ -18,7 +18,7 @@ namespace adventofcode2021.Puzzles.Day2
             result = horPos * depth;
         }
 
-        public void Execute2(IEnumerable<string> input, out int result)
+        public void Part2(IEnumerable<string> input, out int result)
         {
             var instructions = input.Select(i => { var x = i.Split(" "); return new { Command = x[0], Value = int.Parse(x[1]) }; });
 

@@ -17,7 +17,7 @@ namespace adventofcode2021Tests
             int result;
 
             // Act
-            sut.Execute(bingo, out result);
+            sut.Part1(bingo, out result);
 
             // Assert
             result.Should().Be(expectedValue);
@@ -32,7 +32,7 @@ namespace adventofcode2021Tests
             int result;
 
             // Act
-            sut.Execute2(bingo, out result);
+            sut.Part2(bingo, out result);
 
             // Assert
             result.Should().Be(expectedValue);

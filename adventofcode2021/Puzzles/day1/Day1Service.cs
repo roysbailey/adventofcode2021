@@ -14,15 +14,15 @@ namespace adventofcode2021.Puzzles.Day1
             _engine = engine;
         }
 
-        public void Execute(string fileName = ".\\Puzzles\\Day1\\Input.txt")
+        public void Execute(string fileName)
         {
             var depths = _fileReader.ReadData<int>(fileName);
             int increaseCount;
-            // Task 1
-            _engine.Execute(1, depths, out increaseCount);
+
+            _engine.Part1(depths, out increaseCount);
             Console.WriteLine($"Task 1 - there were {increaseCount} increases in depths provided.");
-            // Task 2
-            _engine.Execute(3, depths, out increaseCount);
+
+            _engine.Part2(depths, out increaseCount);
             Console.WriteLine($"Task 2 - there were {increaseCount} increases in depths provided.");
         }
     }
