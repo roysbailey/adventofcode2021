@@ -3,6 +3,8 @@ using adventofcode2021.Puzzles.Day2;
 using adventofcode2021.Puzzles.Day3;
 using adventofcode2021.Puzzles.Day4;
 using adventofcode2021.Puzzles.Day5;
+using adventofcode2021.Puzzles.Day6;
+using adventofcode2021.Puzzles.Day7;
 using adventofcode2021.Puzzles.Utils;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,7 +17,7 @@ namespace adventofcode2021
         {
             IHost host = CreateHostBuilder(args).Build();
 
-            var day = 5;
+            var day = 6;
             switch (day)
             {
                 case 1:
@@ -39,9 +41,16 @@ namespace adventofcode2021
                     var svc5 = host.Services.GetService<IDay5Service>();
                     svc5.Execute();
                     break;
+                case 6:
+                    var svc6 = host.Services.GetService<IDay6Service>();
+                    svc6.Execute();
+                    break;
+                case 7:
+                    var svc7 = host.Services.GetService<IDay7Service>();
+                    svc7.Execute();
+                    break;
             }
         }
-
 
         static IHostBuilder CreateHostBuilder(string[] args) =>
                 Host.CreateDefaultBuilder(args)
@@ -58,6 +67,10 @@ namespace adventofcode2021
                 services.AddTransient<IDay4Engine, Day4Engine>();
                 services.AddTransient<IDay5Service, Day5Service>();
                 services.AddTransient<IDay5Engine, Day5Engine>();
+                services.AddTransient<IDay6Service, Day6Service>();
+                services.AddTransient<IDay6Engine, Day6Engine>();
+                services.AddTransient<IDay7Service, Day7Service>();
+                services.AddTransient<IDay7Engine, Day7Engine>();
             });
     }
 }

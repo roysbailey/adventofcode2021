@@ -4,9 +4,9 @@ using System.Text;
 
 namespace adventofcode2021.Puzzles
 {
-    public interface IDayEngine<T>
+    public interface IDayEngine<T, K>
     {
-        public void Part1(IEnumerable<T> input, out int output);
-        public void Part2(IEnumerable<T> input, out int output);
+        public void Part1(IEnumerable<T> input, out K output);
+        public void Part2(IEnumerable<T> input, out K output);
     }
 }

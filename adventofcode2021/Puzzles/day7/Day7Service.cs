@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Threading;
 using adventofcode2021.Puzzles.Utils;
 
-namespace adventofcode2021.Puzzles.Day6
+namespace adventofcode2021.Puzzles.Day7
 {
-    public class Day6Service : IDay6Service
+    public class Day7Service : IDay7Service
     {
         IFileDataReader _fileReader = null;
-        IDay6Engine _engine = null;
+        IDay7Engine _engine = null;
 
-        public Day6Service(IFileDataReader fileReader, IDay6Engine engine)
+        public Day7Service(IFileDataReader fileReader, IDay7Engine engine)
         {
             _fileReader = fileReader;
             _engine = engine;

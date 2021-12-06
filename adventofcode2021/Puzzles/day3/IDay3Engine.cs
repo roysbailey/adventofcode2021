@@ -4,7 +4,7 @@ using System.Text;
 
 namespace adventofcode2021.Puzzles.Day3
 {
-    public interface IDay3Engine : IDayEngine<string>
+    public interface IDay3Engine : IDayEngine<string, int>
     {
     }
 }
