@@ -23,8 +23,10 @@ namespace adventofcode2021.Puzzles.Day7
             _engine.Part1(input, out result);
             Console.WriteLine($"Task 1 - Optimum horizontal col to minimise fuel : {result}.");
 
+            var stopWatch = Stopwatch.StartNew();
             _engine.Part2(input, out result);
-            Console.WriteLine($"Task 2 - Optimum horizontal col to minimise fuel : {result}.");
+            stopWatch.Stop();
+            Console.WriteLine($"Task 2 - Optimum horizontal col to minimise fuel : {result}. in {stopWatch.ElapsedMilliseconds}ms");
         }
     }
 }
