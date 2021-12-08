@@ -2,14 +2,14 @@
 using System.Diagnostics;
 using adventofcode2021.Puzzles.Utils;
 
-namespace adventofcode2021.Puzzles.Day8
+namespace adventofcode2021.Puzzles.Day9
 {
-    public class Day8Service : IDay8Service
+    public class Day9Service : IDay9Service
     {
         IFileDataReader _fileReader = null;
-        IDay8Engine _engine = null;
+        IDay9Engine _engine = null;
 
-        public Day8Service(IFileDataReader fileReader, IDay8Engine engine)
+        public Day9Service(IFileDataReader fileReader, IDay9Engine engine)
         {
             _fileReader = fileReader;
             _engine = engine;
