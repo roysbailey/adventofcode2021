@@ -19,7 +19,7 @@ namespace adventofcode2021
         {
             IHost host = CreateHostBuilder(args).Build();
 
-            var day = 8;
+            var day = 9;
             switch (day)
             {
                 case 1:

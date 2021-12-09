@@ -21,10 +21,10 @@ namespace adventofcode2021.Puzzles.Day9
             int result;
 
             _engine.Part1(input, out result);
-            Console.WriteLine($"Task 1 - Count of simple numbers : {result}.");
+            Console.WriteLine($"Task 1 - Lowest of adjascent score : {result}.");
 
             _engine.Part2(input, out result);
-            Console.WriteLine($"Task 2 - Sum of all decoded numbers : {result}.");
+            Console.WriteLine($"Task 2 - Top 3 Basin value : {result}.");
         }
     }
 }
