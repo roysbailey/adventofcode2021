@@ -18,13 +18,13 @@ namespace adventofcode2021.Puzzles.Day10
         public void Execute(string fileName)
         {
             var input = _fileReader.ReadData<string>(fileName);
-            int result;
+            long result;
 
             _engine.Part1(input, out result);
             Console.WriteLine($"Task 1 - Syntax error value : {result}.");
 
-            //_engine.Part2(input, out result);
-            //Console.WriteLine($"Task 2 - Top 3 Basin value : {result}.");
+            _engine.Part2(input, out result);
+            Console.WriteLine($"Task 2 - Invalid row middle value sum : {result}.");
         }
     }
 }
